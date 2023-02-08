@@ -3,12 +3,13 @@
   "version": "0.4.0",
   "description": "Linting and development standardization to be used in all of my repos",
   "scripts": {
+    "check-node-version": "check-node-version --npm 8 --node 16",
     "commitlint": "commitlint --from a8cea67de11452094a77ccb466b8ec08fc13cff9",
     "markdownlint": "markdownlint -c .markdownlint.json -i CHANGELOG.md '{,!(node_modules)/**/}*.md'",
     "eslint": "eslint .",
     "standards": "npm run markdownlint && npm run eslint",
     "pretest": "npm run standards",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "npm run check-node-version"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "@commitlint/cli": "17.4.2",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
+    "check-node-version": "^4.2.1",
     "markdownlint-cli": "0.33.0",
     "typescript": "4.9.5"
   },
