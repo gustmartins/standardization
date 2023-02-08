@@ -8,6 +8,8 @@ This repo aggregates many of the standards I use when developing our software, i
 
   * Editor configuration
   * Commit message linting
+  * Markdown linting
+  * JS/TS linting
 
 ## Why?
 
@@ -68,6 +70,28 @@ the needs of the project. Then add a call to markdownlint in the `standards` NPM
 {
   "scripts": {
     "markdownlint": "markdownlint -c .markdownlint.json -i CHANGELOG.md '{,!(node_modules)/**/}*.md'",
+    "standards": "npm run markdownlint && npm run eslint"
+  }
+}
+```
+
+### ESLint
+
+Add a file named `.eslintrc.json` to the root of your project with the following content:
+
+```json
+{
+  "extends": "./node_modules/@gustmartins/standardization/eslint/node"
+}
+```
+
+When ESLint is needed for a project, add an `eslint` task to package.json, and execute it
+as part of the `standards` NPM script as well:
+
+```json
+{
+  "scripts": {
+    "eslint": "eslint .",
     "standards": "npm run markdownlint && npm run eslint"
   }
 }
