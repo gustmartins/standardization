@@ -1,0 +1,22 @@
+{
+  "name": "@gustmartins/standardization",
+  "version": "0.1.0",
+  "description": "Linting and development standardization to be used in all of my repos",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustmartins/standardization.git"
+  },
+  "keywords": [
+    "editor config",
+    "linting"
+  ],
+  "author": "Gustavo Martins <gustavo_martins92@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustmartins/standardization/issues"
+  },
+  "homepage": "https://github.com/gustmartins/standardization#readme"
+}
