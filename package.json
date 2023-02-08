@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "description": "Linting and development standardization to be used in all of my repos",
   "scripts": {
+    "commitlint": "commitlint --from fd02969c3ade36e0d874fc9d1ece61f712518b63",
+    "pretest": "npm run commitlint",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/gustmartins/standardization/issues"
   },
-  "homepage": "https://github.com/gustmartins/standardization#readme"
+  "homepage": "https://github.com/gustmartins/standardization#readme",
+  "dependencies": {
+    "@commitlint/cli": "17.4.2"
+  }
 }

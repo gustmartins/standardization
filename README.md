@@ -6,6 +6,7 @@ Linting and development standardization to be used in all of my repos :zap:
 This repo aggregates many of the standards I use when developing our software, including:
 
   * Editor configuration
+  * Commit message linting
 
 ## Why?
 
@@ -25,6 +26,28 @@ Symlink the .editorconfig file to the root of your project and use the appropria
 extension for your editor:
 
 `ln -s ./node_modules/@gustmartins/standardization/.editorconfig`
+
+### Commitlint
+
+  * Add a file called `commitlint.config.js` to your project root with the following
+  content:
+
+  ```javascript
+  'use strict';
+
+  module.exports = {
+    extends: [ '@gustmartins/standardization/commitlint.js' ],
+  };
+  ```
+
+  * Use `git log --oneline` to find the short hash of the previous commit and take note of
+  it
+  * Add the following NPM script to `package.json`:
+    `"commitlint": "commitlint --from deadbeef"` (where deadbeef is the short hash from
+    the previous step)
+
+  * Add or increment the following NPM script on `package.json`:
+    `"pretest": "npm run commitlint"`
 
 ## License
 
