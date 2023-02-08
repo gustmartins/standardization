@@ -1,6 +1,6 @@
 {
   "name": "@gustmartins/standardization",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Linting and development standardization to be used in all of my repos",
   "scripts": {
     "commitlint": "commitlint --from a8cea67de11452094a77ccb466b8ec08fc13cff9",
