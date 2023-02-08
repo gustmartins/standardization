@@ -4,7 +4,9 @@
   "description": "Linting and development standardization to be used in all of my repos",
   "scripts": {
     "commitlint": "commitlint --from fd02969c3ade36e0d874fc9d1ece61f712518b63",
-    "pretest": "npm run commitlint",
+    "markdownlint": "markdownlint -c .markdownlint.json -i CHANGELOG.md '{,!(node_modules)/**/}*.md'",
+    "standards": "npm run markdownlint && npm run commitlint",
+    "pretest": "npm run standards",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/gustmartins/standardization#readme",
   "dependencies": {
-    "@commitlint/cli": "17.4.2"
+    "@commitlint/cli": "17.4.2",
+    "markdownlint-cli": "0.33.0"
   }
 }
