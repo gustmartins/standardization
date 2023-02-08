@@ -1,0 +1,32 @@
+{
+  "default": true,
+  "header-style": {
+    "style": "atx"
+  },
+  "ul-style": {
+    "style": "asterisk"
+  },
+  "ul-indent": {
+    "start_indented": true
+  },
+  "line-length": {
+    "line_length": 90,
+    "code_block_line_length": 120
+  },
+  "no-duplicate-header": {
+    "siblings_only": true
+  },
+  "no-trailing-punctuation":{
+    "punctuation":  ".,;:"
+  },
+  "no-inline-html": false,
+  "hr-style": {
+    "style": "---"
+  },
+  "code-block-style": {
+    "style": "fenced"
+  },
+  "code-fence-style": {
+    "style": "backtick"
+  }
+}

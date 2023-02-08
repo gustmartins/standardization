@@ -1,4 +1,5 @@
 # Standardization Utilities
+
 Linting and development standardization to be used in all of my repos :zap:
 
 ## What?
@@ -48,6 +49,29 @@ extension for your editor:
 
   * Add or increment the following NPM script on `package.json`:
     `"pretest": "npm run commitlint"`
+
+### Markdownlint
+
+Add a file named `.markdownlint.json` to the root of your project with the following
+content:
+
+```json
+{
+  "extends": "./node_modules/@gustmartins/standardization/.markdownlint.json"
+}
+```
+
+Add the following script to package.json, and adjust the ignore argument as needed to suit
+the needs of the project. Then add a call to markdownlint in the `standards` NPM script.
+
+```json
+{
+  "scripts": {
+    "markdownlint": "markdownlint -c .markdownlint.json -i CHANGELOG.md '{,!(node_modules)/**/}*.md'",
+    "standards": "npm run markdownlint && npm run eslint"
+  }
+}
+```
 
 ## License
 
