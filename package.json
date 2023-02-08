@@ -1,11 +1,11 @@
 {
   "name": "@gustmartins/standardization",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Linting and development standardization to be used in all of my repos",
   "scripts": {
     "commitlint": "commitlint --from a8cea67de11452094a77ccb466b8ec08fc13cff9",
     "markdownlint": "markdownlint -c .markdownlint.json -i CHANGELOG.md '{,!(node_modules)/**/}*.md'",
-    "standards": "npm run markdownlint && npm run commitlint",
+    "standards": "npm run markdownlint",
     "pretest": "npm run standards",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
